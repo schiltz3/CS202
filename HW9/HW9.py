@@ -33,3 +33,33 @@ zig.change_location("Booth")
 print(f"Current theater: {zig.theater}")
 actors = zig.get_random_actors()
 print(f"Random cast: {actors}")
+
+from graphics import *
+from math import sqrt
+from random import randint
+
+
+def main():
+    win = GraphWin("Circles", 500, 500)
+    text1 = Text(Point(152, 20))
+
+    # complete the rest of the program
+    triangle = Polygon(Point(0,0), Point(10,0), Point(0,10) )
+    triangle.setFill(color_rgb(0, 255, 0))
+    triangle.draw(win)
+    square = Polygon(Point(60,60), Point(70,60), Point(60,70), Point(70,70) )
+    square.setFill(color_rgb(0, 0, 255))
+    square.draw(win)
+    circle = Circle(Point(50,50), 20)
+    color = color_rgb(255, 0, 0)
+    circle.setFill(color)
+    circle.setOutline(color)
+    circle.draw(win)
+
+    # to end the window
+    text1.setText("Click anywhere to quit.")
+    win.getMouse()
+    win.close()
+
+
+main()
